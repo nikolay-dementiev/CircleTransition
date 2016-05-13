@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Circle View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CircleTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CircleViewController" customModule="CircleTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,9 +17,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adk-fL-IhO">
+                                <rect key="frame" x="546" y="30" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="QON-hj-qtg"/>
+                                    <constraint firstAttribute="height" constant="44" id="uUS-3O-LG7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="circleTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNC-vk-kNq"/>
+                                    <segue destination="biB-wH-Dhf" kind="show" identifier="PushSegue" id="jdq-kb-cQd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-2u-7jb">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="G8a-yO-YWZ"/>
+                                    <constraint firstAttribute="height" constant="300" id="owW-2X-3Qz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Adk-fL-IhO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="9FK-pC-ZeS"/>
+                            <constraint firstItem="YmI-2u-7jb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pFR-Bx-taI"/>
+                            <constraint firstItem="YmI-2u-7jb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tVW-xo-prC"/>
+                            <constraint firstItem="Adk-fL-IhO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="vIY-oX-iwY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NWj-sT-AaU"/>
+                    <connections>
+                        <outlet property="button" destination="Adk-fL-IhO" id="zDW-RY-pJC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,8 +71,42 @@
                     <view key="view" contentMode="scaleToFill" id="xV1-Wd-HQT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyl-Dd-FeQ">
+                                <rect key="frame" x="546" y="30" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="fdb-a6-DOT"/>
+                                    <constraint firstAttribute="width" constant="44" id="o38-I2-dCf"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="circleTapped:" destination="biB-wH-Dhf" eventType="touchUpInside" id="Xx6-V0-YsK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ipad" translatesAutoresizingMaskIntoConstraints="NO" id="Xa0-vJ-ZZ0">
+                                <rect key="frame" x="150" y="150" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="rwP-tg-RgE"/>
+                                    <constraint firstAttribute="width" constant="300" id="yEe-7r-IK3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xa0-vJ-ZZ0" firstAttribute="centerY" secondItem="xV1-Wd-HQT" secondAttribute="centerY" id="17b-2C-xTo"/>
+                            <constraint firstItem="Xa0-vJ-ZZ0" firstAttribute="centerX" secondItem="xV1-Wd-HQT" secondAttribute="centerX" id="Cma-Pj-CQc"/>
+                            <constraint firstAttribute="trailing" secondItem="wyl-Dd-FeQ" secondAttribute="trailing" constant="10" id="aIn-q3-g3j"/>
+                            <constraint firstItem="wyl-Dd-FeQ" firstAttribute="top" secondItem="sf5-gc-W3P" secondAttribute="bottom" constant="10" id="ckK-8u-f4T"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="wyl-Dd-FeQ" id="p3m-uQ-0EB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pW-ar-tAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,4 +135,8 @@
             <point key="canvasLocation" x="379" y="377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ipad" width="984" height="562"/>
+        <image name="iphone" width="1200" height="1200"/>
+    </resources>
 </document>
