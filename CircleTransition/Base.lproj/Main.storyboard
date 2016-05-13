@@ -127,10 +127,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
+                        <outlet property="delegate" destination="qEt-8A-uUZ" id="FeN-sz-ZKr"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iU6-Nv-Xsh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7m-ma-gZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="qEt-8A-uUZ" customClass="NavigationControllerDelegate" customModule="CircleTransition" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="379" y="377"/>
         </scene>

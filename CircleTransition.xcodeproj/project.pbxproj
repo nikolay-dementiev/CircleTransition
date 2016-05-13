@@ -12,6 +12,8 @@
 		E7D95D091CE5BCDD00207B9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D95D081CE5BCDD00207B9B /* Assets.xcassets */; };
 		E7D95D0C1CE5BCDD00207B9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D95D0A1CE5BCDD00207B9B /* LaunchScreen.storyboard */; };
 		E7D95D151CE5C04300207B9B /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D95D141CE5C04300207B9B /* CircleViewController.swift */; };
+		E7D95D171CE5D3F800207B9B /* NavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D95D161CE5D3F800207B9B /* NavigationControllerDelegate.swift */; };
+		E7D95D191CE5DB6000207B9B /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D95D181CE5DB6000207B9B /* CircleTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E7D95D0B1CE5BCDD00207B9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7D95D0D1CE5BCDE00207B9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7D95D141CE5C04300207B9B /* CircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
+		E7D95D161CE5D3F800207B9B /* NavigationControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		E7D95D181CE5DB6000207B9B /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				E7D95D141CE5C04300207B9B /* CircleViewController.swift */,
+				E7D95D161CE5D3F800207B9B /* NavigationControllerDelegate.swift */,
+				E7D95D181CE5DB6000207B9B /* CircleTransitionAnimator.swift */,
 				E7D95D011CE5BCDD00207B9B /* AppDelegate.swift */,
 				E7D95D051CE5BCDD00207B9B /* Main.storyboard */,
 				E7D95D0A1CE5BCDD00207B9B /* LaunchScreen.storyboard */,
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D95D151CE5C04300207B9B /* CircleViewController.swift in Sources */,
+				E7D95D191CE5DB6000207B9B /* CircleTransitionAnimator.swift in Sources */,
+				E7D95D171CE5D3F800207B9B /* NavigationControllerDelegate.swift in Sources */,
 				E7D95D021CE5BCDD00207B9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
