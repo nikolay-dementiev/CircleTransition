@@ -9,10 +9,10 @@
 import UIKit
 
 class CircleViewController: UIViewController {
-    
-    @IBOutlet weak var button: UIButton!
-    @IBAction func circleTapped(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
+
+	@IBOutlet weak var button: UIButton!
+	@IBAction func circleTapped(sender: AnyObject) {
+		self.navigationController?.popViewControllerAnimated(true)
+	}
 
 }
